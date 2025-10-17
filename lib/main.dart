@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'home_page.dart';
+import 'routes/app_routes.dart';
+import 'routes/app_router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,8 +11,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(theme: ThemeData(primarySwatch: Colors.blue),
-    title: 'FamApp',
-    home: HomePage(),);
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'UI Clone Task',
+      theme: ThemeData(
+        useMaterial3: true,
+        colorSchemeSeed: Colors.indigo,
+      ),
+      initialRoute: AppRoutes.home,
+      routes: AppRouter.routes,
+    );
   }
 }
