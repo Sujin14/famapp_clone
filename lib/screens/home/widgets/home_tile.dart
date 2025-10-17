@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+// Home tile will have the page name, arrow icon and while clicking on the tile it will go to the corresponding pages
+
 class HomeTile extends StatelessWidget {
-  final String title;
-  final String routeName;
+  final String title; // page name
+  final String routeName; // route
 
   const HomeTile({super.key, required this.title, required this.routeName});
 

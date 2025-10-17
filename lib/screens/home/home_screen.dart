@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../../routes/app_routes.dart';
 import 'widgets/home_tile.dart';
 
+//Home screen containing  list tiles for 5 pages.
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -11,12 +13,15 @@ class HomeScreen extends StatelessWidget {
     {'title': 'Screen 3', 'route': AppRoutes.page3},
     {'title': 'Screen 4', 'route': AppRoutes.page4},
     {'title': 'Screen 5', 'route': AppRoutes.page5},
-  ];
+  ]; // passes a map with title and route ti the HomeTile
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('UI Clone Screens')),
+
+      //Home Screen contains a list of pages
+
       body: ListView.builder(
         itemCount: screens.length,
         itemBuilder: (context, index) {

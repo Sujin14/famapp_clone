@@ -1,3 +1,5 @@
+//Class for saving all the routes
+
 class AppRoutes {
   static const home = '/';
   static const page1 = '/page1';
