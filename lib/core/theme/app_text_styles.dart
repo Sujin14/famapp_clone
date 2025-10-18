@@ -1,4 +1,6 @@
 // lib/core/theme/app_text_styles.dart
+// Updated with styles for phone entry
+
 import 'package:flutter/material.dart';
 import 'app_colors.dart';
 
@@ -37,5 +39,28 @@ class AppTextStyles {
     fontSize: 16,
     fontWeight: FontWeight.w600,
     color: Colors.black,
+  );
+
+  // Styles for phone entry screen
+  static const TextStyle entryTitle = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+    color: AppColors.entryTitleText,
+  );
+
+  static const TextStyle entryInput = TextStyle(
+    fontSize: 18,
+    color: AppColors.entryInputText,
+  );
+
+  static const TextStyle termsNormal = TextStyle(
+    fontSize: 14,
+    color: AppColors.termsText,
+  );
+
+  static const TextStyle termsLink = TextStyle(
+    fontSize: 14,
+    color: AppColors.termsLink,
+    fontWeight: FontWeight.w500,
   );
 }

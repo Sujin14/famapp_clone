@@ -9,6 +9,7 @@ class HomeScreen extends StatelessWidget {
 
   final List<Map<String, String>> screens = const [
     {'title': 'Phone Verified Screen', 'route': AppRoutes.page1},
+    {'title': 'Enter Phone Number Screen', 'route': AppRoutes.page2},
     // Add more as screens are implemented
     // {'title': 'Screen 2', 'route': AppRoutes.page2},
   ];
