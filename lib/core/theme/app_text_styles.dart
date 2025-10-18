@@ -69,9 +69,8 @@ class AppTextStyles {
   // SMS Verifying Screen
   static const TextStyle smsTitle = TextStyle(
     fontSize: 22,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w900,
     color: AppColors.white,
-    letterSpacing: 0.5,
   );
 
   // Verification Summary Screen
