@@ -104,7 +104,7 @@ class Page4Screen extends StatelessWidget {
                             ),
                             const SizedBox(
                               height: 1,
-                            ), // adjust spacing to match other subtitles
+                            ), 
                             Text(
                               'View transaction',
                               style: AppTextStyles.summaryItemSub.copyWith(
@@ -119,8 +119,6 @@ class Page4Screen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 16),
-
-                  // Fee note and retry
                   const FeeNote(),
                   const SizedBox(height: 80),
                   RetryButton(

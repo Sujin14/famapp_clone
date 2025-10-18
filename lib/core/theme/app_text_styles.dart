@@ -26,13 +26,13 @@ class AppTextStyles {
 
   // Verified Screen
   static const TextStyle verifiedTitle = TextStyle(
-    fontSize: 22,
+    fontSize: 28,
     fontWeight: FontWeight.bold,
     color: AppColors.white,
   );
 
   static const TextStyle verifiedPhone = TextStyle(
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: FontWeight.bold,
     color: AppColors.accentOrange,
   );
