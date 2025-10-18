@@ -34,12 +34,12 @@ class TermsText extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.all(8.0),
               decoration: BoxDecoration(
-                color: AppColors.orangeAccent.withOpacity(0.2),
+                color: AppColors.accentOrange.withOpacity(0.2),
                 shape: BoxShape.circle,
               ),
               child: const Icon(
                 Icons.arrow_forward_ios,
-                color: AppColors.orangeAccent,
+                color: AppColors.accentOrange,
                 size: 16,
               ),
             ),

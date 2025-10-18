@@ -1,5 +1,3 @@
-// lib/widgets/get_verified_button.dart
-// Bottom button
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:fam_app/core/theme/app_colors.dart';
@@ -16,19 +14,16 @@ class GetVerifiedButton extends StatelessWidget {
         width: double.infinity,
         height: 52,
         child: ElevatedButton(
-          onPressed: () => context.pushNamed('/page2'), // To phone entry
+          onPressed: () => context.pushNamed('/page2'),
           style: ElevatedButton.styleFrom(
-            backgroundColor: AppColors.upiTitleOrange,
-            foregroundColor: Colors.black,
+            backgroundColor: AppColors.buttonPrimary,
+            foregroundColor: AppColors.black,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
             ),
             elevation: 0,
           ),
-          child: const Text(
-            'Get Verified',
-            style: AppTextStyles.buttonText,
-          ),
+          child: const Text('Get Verified', style: AppTextStyles.buttonText),
         ),
       ),
     );

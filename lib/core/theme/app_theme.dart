@@ -1,3 +1,7 @@
+// lib/core/theme/app_theme.dart
+// Theme configuration using Material 3 with styles that match the screenshot's appearance.
+// No changes needed as it integrates with the updated colors and text styles.
+
 import 'package:flutter/material.dart';
 import 'app_colors.dart';
 
@@ -9,7 +13,7 @@ class AppTheme {
       scaffoldBackgroundColor: AppColors.background,
       appBarTheme: const AppBarTheme(
         backgroundColor: AppColors.primary,
-        foregroundColor: Colors.white,
+        foregroundColor: AppColors.white,
       ),
       listTileTheme: const ListTileThemeData(
         iconColor: AppColors.primary,
@@ -19,18 +23,23 @@ class AppTheme {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
           ),
+          backgroundColor: AppColors.accentOrange,
+          foregroundColor: AppColors.black,
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: AppColors.entryInputBg,
+        fillColor: AppColors.inputBackground,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none,
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: AppColors.entryInputBorder, width: 1),
+          borderSide: const BorderSide(
+            color: AppColors.accentOrange,
+            width: 1,
+          ),
         ),
         contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       ),

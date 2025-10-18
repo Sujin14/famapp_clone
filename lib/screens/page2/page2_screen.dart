@@ -31,7 +31,7 @@ class _Page2ScreenState extends State<Page2Screen> {
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [AppColors.entryGradientStart, AppColors.entryBackground],
+            colors: [AppColors.gradientStart, AppColors.black],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
@@ -50,7 +50,7 @@ class _Page2ScreenState extends State<Page2Screen> {
                   child: IconButton(
                     icon: const Icon(
                       Icons.arrow_back,
-                      color: AppColors.verifiedText,
+                      color: AppColors.white,
                       size: 28,
                     ),
                     onPressed: () => context.pop(),

@@ -16,7 +16,7 @@ class ContinueButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.buttonOrange,
+          backgroundColor: AppColors.accentOrange,
           foregroundColor: Colors.black,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),

@@ -1,105 +1,141 @@
-// lib/screens/page4/page4_screen.dart
-// New screen for Verification Summary
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:fam_app/core/theme/app_colors.dart';
 import 'package:fam_app/core/theme/app_text_styles.dart';
 import 'widgets/fee_note.dart';
 import 'widgets/retry_button.dart';
-import 'widgets/transaction_link.dart';
 import 'widgets/verification_item.dart';
 
 class Page4Screen extends StatelessWidget {
   const Page4Screen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [AppColors.summaryGradientStart, AppColors.summaryGradientEnd],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
+      body: Stack(
+        children: [
+          // Background
+          Container(color: AppColors.gradientEnd),
+          Container(
+            height: 200,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Color.fromARGB(255, 61, 39, 3), AppColors.gradientEnd],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
+            ),
           ),
-        ),
-        child: SafeArea(
-          child: Column(
-            children: [
-              // Top navigation: Close button (X)
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    IconButton(
-                      icon: const Icon(Icons.close, color: AppColors.white, size: 28),
-                      onPressed: () => context.pop(),
-                    ),
-                    IconButton(
-                      icon: const Icon(Icons.help_outline, color: AppColors.white, size: 28),
-                      onPressed: () {
-                        // Simulate help action
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Help tapped')),
-                        );
-                      },
-                    ),
-                  ],
-                ),
+          SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0), // global padding
+              child: Column(
+                children: [
+                  // Top navigation
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      IconButton(
+                        icon: const Icon(
+                          Icons.close,
+                          color: AppColors.white,
+                          size: 26,
+                        ),
+                        onPressed: () => context.pop(),
+                      ),
+                      IconButton(
+                        icon: const Icon(
+                          Icons.help_outline,
+                          color: AppColors.white,
+                          size: 26,
+                        ),
+                        onPressed: () {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(content: Text('Help tapped')),
+                          );
+                        },
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 30),
+                  const Text(
+                    "Here's what's next",
+                    textAlign: TextAlign.center,
+                    style: AppTextStyles.summaryTitle,
+                  ),
+                  const SizedBox(height: 40),
+
+                  // Verification items
+                  VerificationItem(
+                    isSuccess: true,
+                    mainText: 'Aadhaar verified',
+                    subText: 'Farhan Mon P',
+                    leadingAsset: 'assets/images/tick1.png',
+                    trailingAsset: 'assets/images/aadhar.jpg',
+                  ),
+                  const Divider(
+                    color: Color.fromARGB(255, 78, 78, 78),
+                    thickness: 1,
+                  ),
+                  VerificationItem(
+                    isSuccess: true,
+                    mainText: 'PAN verified',
+                    subText: 'Farhan Mon P',
+                    leadingAsset: 'assets/images/tick1.png',
+                    trailingAsset: 'assets/images/pan.jpg',
+                  ),
+                  const Divider(
+                    color: Color.fromARGB(255, 78, 78, 78),
+                    thickness: 1,
+                  ),
+
+                  // Payment failed
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      VerificationItem(
+                        isSuccess: false,
+                        mainText: 'Payment Failed',
+                        subTextWidget: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'for video verification',
+                              style: AppTextStyles.summaryItemSub,
+                            ),
+                            const SizedBox(
+                              height: 1,
+                            ), // adjust spacing to match other subtitles
+                            Text(
+                              'View transaction',
+                              style: AppTextStyles.summaryItemSub.copyWith(
+                                color: AppColors.accentOrange,
+                              ),
+                            ),
+                          ],
+                        ),
+                        leadingAsset: 'assets/images/cross.jpg',
+                        trailingAsset: 'assets/images/retry_payment.jpg',
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 16),
+
+                  // Fee note and retry
+                  const FeeNote(),
+                  const SizedBox(height: 80),
+                  RetryButton(
+                    onPressed: () {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('Retry payment tapped')),
+                      );
+                    },
+                  ),
+                  const SizedBox(height: 20),
+                ],
               ),
-              const SizedBox(height: 40),
-
-              // Title
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 48.0),
-                child: Text(
-                  "Here's what's next",
-                  textAlign: TextAlign.center,
-                  style: AppTextStyles.summaryTitle,
-                ),
-              ),
-
-              const SizedBox(height: 40),
-
-              // Verification items
-              const VerificationItem(
-                isSuccess: true,
-                mainText: 'Aadhaar verified',
-                assetPath: 'assets/images/aadhar.jpg',
-              ),
-              
-              const VerificationItem(
-                isSuccess: true,
-                mainText: 'PAN verified',
-                assetPath: 'assets/images/pan.jpg', // Add your asset
-              ),
-              VerificationItem(
-                isSuccess: false,
-                mainText: 'Payment Failed for video verification',
-                assetPath: 'assets/images/retry_payment.jpg',
-              ),
-              const TransactionLink(),
-
-              const Spacer(flex: 1),
-
-              const FeeNote(),
-
-              // Retry Button
-              RetryButton(
-                onPressed: () {
-                  // Simulate retry; navigate or action
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Retry payment tapped')),
-                  );
-                },
-              ),
-
-              const SizedBox(height: 20),
-            ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

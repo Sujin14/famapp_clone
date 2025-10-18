@@ -1,5 +1,3 @@
-// lib/widgets/profile_header.dart
-// Profile avatar and balance
 import 'package:flutter/material.dart';
 import 'package:fam_app/core/theme/app_colors.dart';
 
@@ -16,8 +14,8 @@ class ProfileHeader extends StatelessWidget {
           Container(
             width: 40,
             height: 40,
-            decoration: BoxDecoration(
-              color: AppColors.profileOrange,
+            decoration: const BoxDecoration(
+              color: AppColors.accentOrange,
               shape: BoxShape.circle,
             ),
             child: const Center(
@@ -31,10 +29,10 @@ class ProfileHeader extends StatelessWidget {
               ),
             ),
           ),
-          Text(
+          const Text(
             '₹0',
-            style: const TextStyle(
-              color: AppColors.currencyRupee,
+            style: TextStyle(
+              color: AppColors.accentYellow,
               fontSize: 24,
               fontWeight: FontWeight.bold,
             ),

@@ -1,4 +1,3 @@
-// lib/widgets/continue_button.dart
 import 'package:flutter/material.dart';
 import 'package:fam_app/core/theme/app_colors.dart';
 import 'package:fam_app/core/theme/app_text_styles.dart';
@@ -16,7 +15,7 @@ class ContinueButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.buttonOrange,
+          backgroundColor: AppColors.buttonPrimary,
           foregroundColor: Colors.black,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),

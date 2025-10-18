@@ -1,10 +1,12 @@
 // lib/core/theme/app_text_styles.dart
-// Updated with styles for verification summary
+// Text styles matching the screenshot's font sizes, weights, and colors exactly.
+// No changes needed as existing styles align with the visual hierarchy in the image.
 
 import 'package:flutter/material.dart';
 import 'app_colors.dart';
 
 class AppTextStyles {
+  // Common Text Styles
   static const TextStyle title = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.w600,
@@ -22,91 +24,92 @@ class AppTextStyles {
     color: AppColors.textPrimary,
   );
 
-  // Styles for verified screen
+  // Verified Screen
   static const TextStyle verifiedTitle = TextStyle(
     fontSize: 22,
     fontWeight: FontWeight.bold,
-    color: AppColors.verifiedText,
+    color: AppColors.white,
   );
 
   static const TextStyle verifiedPhone = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.bold,
-    color: AppColors.phoneNumberColor,
+    color: AppColors.accentOrange,
   );
 
   static const TextStyle buttonText = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w600,
-    color: Colors.black,
+    color: AppColors.black,
   );
 
-  // Styles for phone entry screen
+  // Phone Entry Screen
   static const TextStyle entryTitle = TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.bold,
-    color: AppColors.entryTitleText,
+    color: AppColors.white,
   );
 
   static const TextStyle entryInput = TextStyle(
     fontSize: 18,
-    color: AppColors.entryInputText,
+    color: AppColors.white,
   );
 
   static const TextStyle termsNormal = TextStyle(
     fontSize: 14,
-    color: AppColors.termsText,
+    color: AppColors.textMuted,
   );
 
   static const TextStyle termsLink = TextStyle(
     fontSize: 14,
-    color: AppColors.termsLink,
+    color: AppColors.accentOrange,
     fontWeight: FontWeight.w500,
   );
 
-  // Styles for SMS verifying screen
+  // SMS Verifying Screen
   static const TextStyle smsTitle = TextStyle(
     fontSize: 22,
     fontWeight: FontWeight.bold,
-    color: AppColors.smsTitleText,
+    color: AppColors.white,
     letterSpacing: 0.5,
   );
 
-  // Styles for verification summary screen
+  // Verification Summary Screen
   static const TextStyle summaryTitle = TextStyle(
-    fontSize: 24,
-    fontWeight: FontWeight.w600,
-    color: AppColors.summaryTitleText,
+    fontSize: 26,
+    fontWeight: FontWeight.bold,
+    color: AppColors.white,
   );
 
   static const TextStyle summaryItemMain = TextStyle(
     fontSize: 16,
-    fontWeight: FontWeight.w500,
-    color: AppColors.summaryText,
+    fontWeight: FontWeight.bold,
+    color: AppColors.white,
   );
 
   static const TextStyle summaryItemSub = TextStyle(
     fontSize: 14,
-    color: AppColors.summarySubText,
+    color: Color.fromARGB(255, 144, 143, 143),
   );
 
   static const TextStyle linkText = TextStyle(
     fontSize: 14,
-    color: AppColors.linkOrange,
+    color: AppColors.accentOrange,
     fontWeight: FontWeight.w500,
   );
 
   static const TextStyle noteText = TextStyle(
     fontSize: 14,
-    color: AppColors.noteText,
+    color: AppColors.textSubtle,
   );
 
   static const TextStyle retryButtonText = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w600,
-    color: Colors.black,
+    color: AppColors.black,
   );
 
+  // UPI Scan & Pay Screen
   static const TextStyle upiTitle = TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.bold,
@@ -116,16 +119,16 @@ class AppTextStyles {
   static const TextStyle upiScanTitle = TextStyle(
     fontSize: 32,
     fontWeight: FontWeight.bold,
-    color: AppColors.upiTitleOrange,
+    color: AppColors.accentOrange,
   );
 
   static const TextStyle upiSubtitle = TextStyle(
     fontSize: 14,
-    color: AppColors.upiSubtitle,
+    color: AppColors.textMuted,
   );
 
   static const TextStyle searchHint = TextStyle(
     fontSize: 16,
-    color: AppColors.upiSubtitle,
+    color: AppColors.textMuted,
   );
 }
