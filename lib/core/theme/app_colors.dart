@@ -1,5 +1,5 @@
 // lib/core/theme/app_colors.dart
-// Consolidated with common names for duplicate colors
+// Updated with colors for SMS verifying screen
 
 import 'package:flutter/material.dart';
 
@@ -38,4 +38,12 @@ class AppColors {
   static const Color termsLink = orangePrimary;
   static const Color purplePhone = Color(0xFF9C27B0);
   static const Color orangeAccent = orangePrimary;
+  
+  // Colors for SMS verifying screen
+  static const Color smsGradientStart = darkBackground;
+  static const Color smsGradientEnd = black;
+  static const Color smsTitleText = white;
+  static const Color purpleGlow = Color(0xFF7B1FA2); // Purple for glow and panels
+  static const Color blueBorder = Color(0xFF3F51B5); // Blue for phone border
+  static const Color qrOrange = Color(0xFFFF9800); // Orange for QR code
 }

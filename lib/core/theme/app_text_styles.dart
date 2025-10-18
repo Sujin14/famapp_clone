@@ -1,5 +1,5 @@
 // lib/core/theme/app_text_styles.dart
-// Updated with styles for phone entry
+// Updated with styles for SMS verifying
 
 import 'package:flutter/material.dart';
 import 'app_colors.dart';
@@ -62,5 +62,13 @@ class AppTextStyles {
     fontSize: 14,
     color: AppColors.termsLink,
     fontWeight: FontWeight.w500,
+  );
+
+  // Styles for SMS verifying screen
+  static const TextStyle smsTitle = TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.bold,
+    color: AppColors.smsTitleText,
+    letterSpacing: 0.5,
   );
 }
