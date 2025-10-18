@@ -1,7 +1,7 @@
+
 import 'package:flutter/material.dart';
-import 'core/theme/app_theme.dart';
-import 'routes/app_routes.dart';
-import 'routes/app_router.dart';
+import 'package:fam_app/core/theme/app_theme.dart';
+import 'package:fam_app/routes/app_router.dart';
 
 //Starting point of the app
 void main() {
@@ -13,12 +13,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'UI Clone Task',
-      theme: AppTheme.lightTheme,//File having the theme data
-      initialRoute: AppRoutes.home, // Initial route pointing to the HomeScreen
-      routes: AppRouter.routes, // Approuter stores all the routes
+      theme: AppTheme.lightTheme, 
+      routerConfig: AppRouter.router, // Uses GoRouter for named routing
     );
   }
 }

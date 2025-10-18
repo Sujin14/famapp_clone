@@ -1,3 +1,4 @@
+// lib/core/theme/app_theme.dart
 import 'package:flutter/material.dart';
 import 'app_colors.dart';
 
@@ -11,8 +12,13 @@ class AppTheme {
         backgroundColor: AppColors.primary,
         foregroundColor: Colors.white,
       ),
-      listTileTheme: const ListTileThemeData(
-        iconColor: AppColors.primary,
+      listTileTheme: const ListTileThemeData(iconColor: AppColors.primary),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+          ),
+        ),
       ),
     );
   }

@@ -1,3 +1,4 @@
+// lib/core/theme/app_text_styles.dart
 import 'package:flutter/material.dart';
 import 'app_colors.dart';
 
@@ -17,5 +18,24 @@ class AppTextStyles {
     fontSize: 22,
     fontWeight: FontWeight.bold,
     color: AppColors.textPrimary,
+  );
+
+  // Styles for verified screen
+  static const TextStyle verifiedTitle = TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.bold,
+    color: AppColors.verifiedText,
+  );
+
+  static const TextStyle verifiedPhone = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+    color: AppColors.phoneNumberColor,
+  );
+
+  static const TextStyle buttonText = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+    color: Colors.black,
   );
 }

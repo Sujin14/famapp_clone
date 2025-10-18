@@ -1,5 +1,4 @@
-//Class for saving all the routes
-
+// lib/routes/app_routes.dart
 class AppRoutes {
   static const home = '/';
   static const page1 = '/page1';
