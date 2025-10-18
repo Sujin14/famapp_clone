@@ -1,7 +1,9 @@
+
 import 'package:flutter/material.dart';
+import 'package:fam_app/core/theme/app_theme.dart';
+import 'package:fam_app/routes/app_router.dart';
 
-import 'home_page.dart';
-
+//Starting point of the app
 void main() {
   runApp(const MyApp());
 }
@@ -11,8 +13,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(theme: ThemeData(primarySwatch: Colors.blue),
-    title: 'FamApp',
-    home: HomePage(),);
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      title: 'UI Clone Task',
+      theme: AppTheme.lightTheme, 
+      routerConfig: AppRouter.router, // Uses GoRouter for named routing
+    );
   }
 }
