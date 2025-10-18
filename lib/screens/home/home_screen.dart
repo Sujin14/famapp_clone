@@ -1,9 +1,8 @@
 // lib/screens/home/home_screen.dart
-// Updated to include tile for page3
+// Updated to include tile for page4
 
 import 'package:flutter/material.dart';
 import 'package:fam_app/routes/app_routes.dart';
-
 import 'widgets/home_tile.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,6 +12,7 @@ class HomeScreen extends StatelessWidget {
     {'title': 'Phone Verified Screen', 'route': AppRoutes.page1},
     {'title': 'Enter Phone Number Screen', 'route': AppRoutes.page2},
     {'title': 'Verifying SMS Screen', 'route': AppRoutes.page3},
+    {'title': 'Verification Summary Screen', 'route': AppRoutes.page4},
   ];
 
   @override
@@ -23,10 +23,7 @@ class HomeScreen extends StatelessWidget {
         itemCount: screens.length,
         itemBuilder: (context, index) {
           final item = screens[index];
-          return HomeTile(
-            title: item['title']!,
-            routeName: item['route']!,
-          );
+          return HomeTile(title: item['title']!, routeName: item['route']!);
         },
       ),
     );

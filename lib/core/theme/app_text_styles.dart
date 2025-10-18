@@ -1,5 +1,5 @@
 // lib/core/theme/app_text_styles.dart
-// Updated with styles for SMS verifying
+// Updated with styles for verification summary
 
 import 'package:flutter/material.dart';
 import 'app_colors.dart';
@@ -70,5 +70,40 @@ class AppTextStyles {
     fontWeight: FontWeight.bold,
     color: AppColors.smsTitleText,
     letterSpacing: 0.5,
+  );
+
+  // Styles for verification summary screen
+  static const TextStyle summaryTitle = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.w600,
+    color: AppColors.summaryTitleText,
+  );
+
+  static const TextStyle summaryItemMain = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    color: AppColors.summaryText,
+  );
+
+  static const TextStyle summaryItemSub = TextStyle(
+    fontSize: 14,
+    color: AppColors.summarySubText,
+  );
+
+  static const TextStyle linkText = TextStyle(
+    fontSize: 14,
+    color: AppColors.linkOrange,
+    fontWeight: FontWeight.w500,
+  );
+
+  static const TextStyle noteText = TextStyle(
+    fontSize: 14,
+    color: AppColors.noteText,
+  );
+
+  static const TextStyle retryButtonText = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+    color: Colors.black,
   );
 }

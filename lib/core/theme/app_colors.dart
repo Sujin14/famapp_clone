@@ -1,5 +1,5 @@
 // lib/core/theme/app_colors.dart
-// Updated with colors for SMS verifying screen
+// Updated with colors for verification summary screen
 
 import 'package:flutter/material.dart';
 
@@ -16,7 +16,7 @@ class AppColors {
   static const Color darkBackground = Color(0xFF0D0C1D);
   static const Color orangePrimary = Color(0xFFFFA726);
   static const Color inputBg = Color(0xFF1A1A1A);
-  static const Color termsNormal = Color(0xFF8E8E93);
+  static const Color termsNormal = Color(0xFF8E8A93);
   
   // Custom colors for screens
   static const Color verifiedGradientStart = darkBackground;
@@ -43,7 +43,20 @@ class AppColors {
   static const Color smsGradientStart = darkBackground;
   static const Color smsGradientEnd = black;
   static const Color smsTitleText = white;
-  static const Color purpleGlow = Color(0xFF7B1FA2); // Purple for glow and panels
-  static const Color blueBorder = Color(0xFF3F51B5); // Blue for phone border
-  static const Color qrOrange = Color(0xFFFF9800); // Orange for QR code
+  static const Color purpleGlow = Color(0xFF7B1FA2);
+  static const Color blueBorder = Color(0xFF3F51B5);
+  static const Color qrOrange = Color(0xFFFF9800);
+
+  // Colors for verification summary screen
+  static const Color summaryGradientStart = darkBackground;
+  static const Color summaryGradientEnd = black;
+  static const Color summaryTitleText = white;
+  static const Color checkGreen = Color(0xFF4CAF50);
+  static const Color failRed = Color(0xFFF44336);
+  static const Color summaryText = white;
+  static const Color summarySubText = Color(0xFFBDBDBD);
+  static const Color linkOrange = orangePrimary;
+  static const Color noteBg = Color(0xFF1A1A1A);
+  static const Color noteText = Color(0xFFBDBDBD);
+  static const Color feeIcon = Color(0xFFFF9800);
 }
