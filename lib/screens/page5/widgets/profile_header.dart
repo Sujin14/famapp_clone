@@ -14,21 +14,30 @@ class ProfileHeader extends StatelessWidget {
           Container(
             width: 40,
             height: 40,
-            decoration: const BoxDecoration(
-              color: AppColors.accentOrange,
+            decoration: BoxDecoration(
               shape: BoxShape.circle,
+              gradient: const LinearGradient(
+                colors: [
+                  Color.fromARGB(255, 49, 27, 9),
+                  Color.fromARGB(255, 30, 19, 2),
+                  Color.fromARGB(255, 164, 113, 4),
+                ],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
             ),
             child: const Center(
               child: Text(
                 'F',
                 style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
+                  color: AppColors.accentOrange,
+                  fontSize: 22,
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
           ),
+
           const Text(
             '₹0',
             style: TextStyle(

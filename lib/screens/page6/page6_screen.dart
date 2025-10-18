@@ -36,7 +36,6 @@ class Page6Screen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              // Header (centered, but padded if needed for alignment)
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 40),
                 child: VerifiedHeader(
@@ -56,7 +55,7 @@ class Page6Screen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
                 child: ContinueButton(
-                  onPressed: () => context.pop(), // GoRouter pop (or context.goNamed(AppRoutes.home) for navigation to home)
+                  onPressed: () => context.pop(), 
                 ),
               ),
             ],

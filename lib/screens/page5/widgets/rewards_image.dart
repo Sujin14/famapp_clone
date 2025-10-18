@@ -6,10 +6,13 @@ class RewardsImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset(
-      'assets/images/trophy.jpg',
-      height: 250,
-      fit: BoxFit.contain,
+    return Padding(
+      padding: const EdgeInsets.only(left: 16.0, right: 16.0),
+      child: Image.asset(
+        'assets/images/trophy.jpg',
+        height: 250,
+        fit: BoxFit.contain,
+      ),
     );
   }
 }

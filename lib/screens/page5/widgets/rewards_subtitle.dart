@@ -11,7 +11,8 @@ class RewardsSubtitle extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
       child: Text(
-        'Big rewards\nWin on recharges, gift cards & Google Play Redeem Codes.',
+        'Big rewards\nWin on recharges, gift cards\n & Google Play Redeem Codes.',
+        textAlign: TextAlign.center,
         style: AppTextStyles.upiSubtitle,
       ),
     );

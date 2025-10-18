@@ -110,7 +110,7 @@ class AppTextStyles {
 
   // UPI Scan & Pay Screen
   static const TextStyle upiTitle = TextStyle(
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: FontWeight.bold,
     color: AppColors.white,
   );

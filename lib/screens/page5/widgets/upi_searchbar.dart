@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:fam_app/core/theme/app_colors.dart';
 import 'package:fam_app/core/theme/app_text_styles.dart';
@@ -8,14 +9,17 @@ class UpiSearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24.0),
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: Container(
+        height: 50,
+        width: double.infinity,
         decoration: BoxDecoration(
           color: AppColors.searchBackground,
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(16),
           border: Border.all(color: AppColors.searchBorder.withOpacity(0.3)),
         ),
         child: TextField(
+          
           style: AppTextStyles.entryInput.copyWith(color: AppColors.white),
           decoration: InputDecoration(
             hintText: 'Pay UPI ID or number',

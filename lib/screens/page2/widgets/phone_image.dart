@@ -8,7 +8,8 @@ class PhoneImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Image.asset(
       'assets/images/phone_image.jpg', // Phone Image image from assets
-      height: 250,
+      height: 100,
+      width: 150,
       fit: BoxFit.contain,
     );
   }
