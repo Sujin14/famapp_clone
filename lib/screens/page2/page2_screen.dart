@@ -26,7 +26,7 @@ class _Page2ScreenState extends State<Page2Screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: true, // ✅ prevents overflow when keyboard opens
+      resizeToAvoidBottomInset: true,
       body: Stack(
         children: [
           // Base background

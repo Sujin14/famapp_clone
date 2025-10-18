@@ -1,7 +1,3 @@
-// lib/core/theme/app_text_styles.dart
-// Text styles matching the screenshot's font sizes, weights, and colors exactly.
-// No changes needed as existing styles align with the visual hierarchy in the image.
-
 import 'package:flutter/material.dart';
 import 'app_colors.dart';
 

@@ -7,22 +7,28 @@ class GetVerifiedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 20.0),
+    return Center(
       child: SizedBox(
-        width: 180,
-        height: 52,
+        width: 220,
+        height: 56,
         child: ElevatedButton(
-          onPressed: (){},
+          onPressed: () {},
           style: ElevatedButton.styleFrom(
-            backgroundColor: AppColors.buttonPrimary,
-            foregroundColor: AppColors.black,
+            backgroundColor: AppColors.accentOrange,
+            elevation: 6,
+            shadowColor: Colors.black.withOpacity(0.5),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(38),
             ),
-            elevation: 0,
           ),
-          child: const Text('Get Verified', style: AppTextStyles.buttonText),
+          child: Text(
+            'Get Verified',
+            style: AppTextStyles.buttonText.copyWith(
+              color: AppColors.black,
+              fontSize: 18,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
         ),
       ),
     );

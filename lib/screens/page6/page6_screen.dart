@@ -30,7 +30,7 @@ class Page6Screen extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: IconButton(
                     icon: const Icon(Icons.arrow_back, color: Colors.white),
-                    onPressed: () => context.pop(), // GoRouter pop
+                    onPressed: () => context.pop(),
                   ),
                 ),
               ),
@@ -39,14 +39,14 @@ class Page6Screen extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 40),
                 child: VerifiedHeader(
-                  title: 'Let\'s verify your phone number',
+                  title: 'Let\'s verify\n your phone number',
                   phoneNumber: '9746942596',
                 ),
               ),
 
               const Spacer(),
 
-              // Illustration (centered)
+              // Illustration
               const VerifiedImage(),
 
               const Spacer(),

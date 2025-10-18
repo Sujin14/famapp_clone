@@ -1,4 +1,3 @@
-// lib/widgets/verified_header.dart
 import 'package:flutter/material.dart';
 import 'package:fam_app/core/theme/app_text_styles.dart';
 

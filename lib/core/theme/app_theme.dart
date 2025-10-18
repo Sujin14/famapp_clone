@@ -1,7 +1,3 @@
-// lib/core/theme/app_theme.dart
-// Theme configuration using Material 3 with styles that match the screenshot's appearance.
-// No changes needed as it integrates with the updated colors and text styles.
-
 import 'package:flutter/material.dart';
 import 'app_colors.dart';
 

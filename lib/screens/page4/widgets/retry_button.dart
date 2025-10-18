@@ -1,7 +1,3 @@
-// lib/features/verification/widgets/retry_button.dart
-// Orange rounded button for retry payment, matching the screenshot's gradient-like appearance.
-// No changes needed as it already matches the style.
-
 import 'package:flutter/material.dart';
 import 'package:fam_app/core/theme/app_colors.dart';
 import 'package:fam_app/core/theme/app_text_styles.dart';

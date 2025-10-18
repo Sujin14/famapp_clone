@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../core/theme/app_colors.dart';
 
 class FeeNote extends StatelessWidget {
@@ -13,29 +12,24 @@ class FeeNote extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         border: Border.all(color: const Color.fromARGB(255, 76, 76, 77)),
-        gradient: const LinearGradient(
+        gradient: const RadialGradient(
           colors: [
-            AppColors.black,
-            AppColors.accentOrange,
-            AppColors.accentOrange,
-            AppColors.black,
+            Color.fromARGB(103, 239, 165, 29),
+            AppColors.black,           
           ],
-          stops: [0.0, 0.495, 0.505, 1.0],
-          begin: Alignment.centerLeft,
-          end: Alignment.centerRight,
+          stops: [0.0, 1.0],
+          center: Alignment.center,
+          radius: 1,
         ),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-             const Center(
-              child: Icon(
-                Icons.info_outline,
-                size: 20,
-                color: AppColors.accentOrange,
-              ),
-            ),
-          
+          const Icon(
+            Icons.info_outline,
+            size: 20,
+            color: AppColors.accentOrange,
+          ),
           const SizedBox(width: 8),
           const Expanded(
             child: Column(

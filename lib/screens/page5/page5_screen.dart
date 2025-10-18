@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fam_app/core/theme/app_colors.dart';
+
 import 'widgets/get_verified_button.dart';
+import 'widgets/profile_header.dart';
 import 'widgets/rewards_image.dart';
 import 'widgets/rewards_subtitle.dart';
 import 'widgets/scan_title.dart';
@@ -11,57 +13,37 @@ class Page5Screen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    final double headerHeight = (size.height * 0.36).clamp(280.0, 380.0);
+    final double sheetOverlap = 70.0;
+    final double sheetTop = headerHeight - sheetOverlap;
+    final double sheetHeight = size.height - sheetTop;
+
     return Scaffold(
       backgroundColor: AppColors.black,
       body: Stack(
         children: [
-          // Top header container
-          Container(
-            height: 250,
+          Container(color: AppColors.black),
+
+          SizedBox(
+            height: headerHeight,
             width: double.infinity,
-            color: AppColors.black,
             child: Stack(
               children: [
-                Positioned(
-                  top: 50,
-                  left: 16,
-                  child: Container(
-                    width: 40,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: const Color.fromARGB(255, 50, 50, 51)),
-                      shape: BoxShape.circle,
-                      gradient: const LinearGradient(
-                        colors: [
-                          Color.fromARGB(255, 49, 27, 9),
-                          Color.fromARGB(255, 30, 19, 2),
-                          Color.fromARGB(255, 164, 113, 4),
-                        ],
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                      ),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'F',
-                        style: TextStyle(
-                          color: AppColors.accentOrange,
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
+                const Positioned(
+                  top: 28,
+                  left: 14,
+                  child: ProfileAvatar(),
                 ),
 
-                const Align(
-                  alignment: Alignment.center,
+                Center(
                   child: Text(
                     '₹0',
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: AppColors.white,
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 36,
+                      fontWeight: FontWeight.w800,
+                      letterSpacing: 0.2,
                     ),
                   ),
                 ),
@@ -70,30 +52,71 @@ class Page5Screen extends StatelessWidget {
           ),
 
           Positioned(
-            top: 200,
+            top: sheetTop,
             left: 0,
             right: 0,
-            bottom: 0,
+            height: sheetHeight,
             child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
               decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 34, 32, 32),
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(24),
-                  topRight: Radius.circular(24),
-                ),
-              ),
-              child: Column(
-                children: const [
-                  UpiSearchBar(),
-                  SizedBox(height: 10),
-                  ScanTitle(),
-                  SizedBox(height: 10),
-                  RewardsImage(),
-                  RewardsSubtitle(),
-                  GetVerifiedButton(),
-                  SizedBox(height: 20),
+                color: const Color.fromARGB(255, 29, 28, 29),
+                borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.6),
+                    blurRadius: 10,
+                    offset: const Offset(0, -4),
+                  ),
                 ],
+              ),
+              child: SafeArea(
+                top: false,
+                child: Column(
+                  children: [
+                    const SizedBox(height: 10),
+                    Container(
+                      width: 40,
+                      height: 5,
+                      decoration: BoxDecoration(
+                        color: Colors.grey.shade800,
+                        borderRadius: BorderRadius.circular(3),
+                      ),
+                    ),
+                    const SizedBox(height: 18),
+
+                    SizedBox(
+                      height: sheetHeight - 18 - 10 - 5 - 24, 
+                      child: SingleChildScrollView(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            const Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 14.0),
+                              child: UpiSearchBar(),
+                            ),
+                            const SizedBox(height: 25),
+
+                            // Titles
+                            const ScanTitle(),
+                            const SizedBox(height: 15),
+
+                            // Illustration
+                            const RewardsImage(),
+
+                            // Subtitle
+                            const SizedBox(height: 10),
+                            const RewardsSubtitle(),
+
+                            // Get Verified button
+                            const SizedBox(height: 20),
+                            const GetVerifiedButton(),
+
+                            const SizedBox(height: 28),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

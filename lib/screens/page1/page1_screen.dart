@@ -20,7 +20,10 @@ class Page1Screen extends StatelessWidget {
             height: 300, // height of top gradient
             decoration: const BoxDecoration(
               gradient: LinearGradient(
-                colors: [Color.fromARGB(255, 34, 30, 60), AppColors.gradientEnd],
+                colors: [
+                  Color.fromARGB(255, 34, 30, 60),
+                  AppColors.gradientEnd,
+                ],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
               ),
@@ -62,10 +65,11 @@ class Page1Screen extends StatelessWidget {
 
                 // Continue Button
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-                  child: ContinueButton(
-                    onPressed: () => context.pop(),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 30,
                   ),
+                  child: ContinueButton(),
                 ),
               ],
             ),
