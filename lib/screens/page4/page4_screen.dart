@@ -78,7 +78,7 @@ class Page4Screen extends StatelessWidget {
               VerificationItem(
                 isSuccess: false,
                 mainText: 'Payment Failed for video verification',
-                assetPath: 'assets/images/retry_payment.jpg', // Add your asset
+                assetPath: 'assets/images/retry_payment.jpg',
               ),
               const TransactionLink(),
 

@@ -1,6 +1,3 @@
-// lib/core/theme/app_colors.dart
-// Updated with colors for verification summary screen
-
 import 'package:flutter/material.dart';
 
 class AppColors {
@@ -16,7 +13,7 @@ class AppColors {
   static const Color darkBackground = Color(0xFF0D0C1D);
   static const Color orangePrimary = Color(0xFFFFA726);
   static const Color inputBg = Color(0xFF1A1A1A);
-  static const Color termsNormal = Color(0xFF8E8A93);
+  static const Color termsNormal = Color(0xFF8E8E93);
   
   // Custom colors for screens
   static const Color verifiedGradientStart = darkBackground;
@@ -59,4 +56,14 @@ class AppColors {
   static const Color noteBg = Color(0xFF1A1A1A);
   static const Color noteText = Color(0xFFBDBDBD);
   static const Color feeIcon = Color(0xFFFF9800);
+
+  // Colors for UPI Scan and Pay screen
+  static const Color upiGradientStart = darkBackground;
+  static const Color upiGradientEnd = black;
+  static const Color upiTitleOrange = Color(0xFFFFA726);
+  static const Color upiSubtitle = Color(0xFF8E8E93);
+  static const Color profileOrange = Color(0xFFFF9800);
+  static const Color searchBg = Color(0xFF1A1A1A);
+  static const Color searchBorder = orangePrimary;
+  static const Color currencyRupee = Color(0xFFFFC107);
 }

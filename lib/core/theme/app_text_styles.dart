@@ -106,4 +106,26 @@ class AppTextStyles {
     fontWeight: FontWeight.w600,
     color: Colors.black,
   );
+
+  static const TextStyle upiTitle = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+    color: AppColors.white,
+  );
+
+  static const TextStyle upiScanTitle = TextStyle(
+    fontSize: 32,
+    fontWeight: FontWeight.bold,
+    color: AppColors.upiTitleOrange,
+  );
+
+  static const TextStyle upiSubtitle = TextStyle(
+    fontSize: 14,
+    color: AppColors.upiSubtitle,
+  );
+
+  static const TextStyle searchHint = TextStyle(
+    fontSize: 16,
+    color: AppColors.upiSubtitle,
+  );
 }
