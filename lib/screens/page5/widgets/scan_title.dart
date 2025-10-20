@@ -11,7 +11,12 @@ class ScanTitle extends StatelessWidget {
       children: [
         Text('Unlock your', style: AppTextStyles.upiTitle),
         const SizedBox(height: 6),
-        Text('Scan and Pay', style: AppTextStyles.upiScanTitle.copyWith(color: AppColors.accentOrange)),
+        Text(
+          'Scan and Pay',
+          style: AppTextStyles.upiScanTitle.copyWith(
+            color: AppColors.accentOrange,
+          ),
+        ),
       ],
     );
   }

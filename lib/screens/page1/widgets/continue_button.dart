@@ -1,6 +1,8 @@
+import 'package:fam_app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:fam_app/core/theme/app_colors.dart';
 import 'package:fam_app/core/theme/app_text_styles.dart';
+import 'package:go_router/go_router.dart';
 
 // ContinueButton is a reusable, full-width button widget
 class ContinueButton extends StatelessWidget {
@@ -14,7 +16,7 @@ class ContinueButton extends StatelessWidget {
       height: 52,
       
       child: ElevatedButton(
-        onPressed: (){},
+        onPressed: () => context.pushNamed(AppRoutes.page4),
 
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.accentOrange,

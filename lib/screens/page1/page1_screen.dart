@@ -17,11 +17,11 @@ class Page1Screen extends StatelessWidget {
           // Background color
           Container(color: AppColors.gradientEnd),
           Container(
-            height: 300, // height of top gradient
+            height: 160, // height of top gradient
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Color.fromARGB(255, 34, 30, 60),
+                  Color(0xFFEAEFFE),
                   AppColors.gradientEnd,
                 ],
                 begin: Alignment.topCenter,

@@ -20,10 +20,10 @@ class Page5Screen extends StatelessWidget {
     final double sheetHeight = size.height - sheetTop;
 
     return Scaffold(
-      backgroundColor: AppColors.black,
+      backgroundColor: Color(0xFF2D274B),
       body: Stack(
         children: [
-          Container(color: AppColors.black),
+          Container(color: Color(0xFF2D274B)),
 
           SizedBox(
             height: headerHeight,
@@ -58,7 +58,7 @@ class Page5Screen extends StatelessWidget {
             height: sheetHeight,
             child: Container(
               decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 29, 28, 29),
+                color: Color(0xFF2D274B),
                 borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
                 boxShadow: [
                   BoxShadow(

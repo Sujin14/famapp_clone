@@ -14,8 +14,8 @@ class FeeNote extends StatelessWidget {
         border: Border.all(color: const Color.fromARGB(255, 76, 76, 77)),
         gradient: const RadialGradient(
           colors: [
-            Color.fromARGB(103, 239, 165, 29),
-            AppColors.black,           
+            Color.fromARGB(103, 151, 135, 243),
+            Color(0xFF2D274B),           
           ],
           stops: [0.0, 1.0],
           center: Alignment.center,
