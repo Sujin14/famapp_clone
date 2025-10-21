@@ -2,7 +2,6 @@ import 'package:fam_app/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:fam_app/core/theme/app_colors.dart';
-import '../../routes/app_routes.dart';
 import 'widgets/phone_image.dart';
 import 'widgets/phone_input_field.dart';
 import 'widgets/terms_text.dart';
@@ -34,10 +33,10 @@ class _Page2ScreenState extends State<Page2Screen> {
 
           // Top gradient overlay
           Container(
-            height: 250,
+            height: 160,
             decoration: const BoxDecoration(
               gradient: LinearGradient(
-                colors: [Color.fromARGB(255, 61, 39, 3), AppColors.gradientEnd],
+                colors: [Color(0xFFEAEFFE), AppColors.gradientEnd],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
               ),
@@ -88,8 +87,6 @@ class _Page2ScreenState extends State<Page2Screen> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 24.0),
                     child: PhoneInputField(
-                      controller: _phoneController,
-                      onSubmitted: () => context.pushNamed(AppRoutes.page1),
                     ),
                   ),
 

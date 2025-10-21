@@ -1,6 +1,9 @@
+import 'package:fam_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:fam_app/core/theme/app_text_styles.dart';
-import 'package:fam_app/core/theme/app_colors.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../routes/app_routes.dart';
 
 class TermsText extends StatelessWidget {
   const TermsText({super.key});
@@ -38,8 +41,15 @@ class TermsText extends StatelessWidget {
           const SizedBox(width: 12),
           CircleAvatar(
             radius: 30,
-            backgroundColor: const Color.fromARGB(255, 109, 77, 29),
-            child: Icon(Icons.arrow_forward,size: 30,color: AppColors.black,)
+            backgroundColor: AppColors.accentOrange,
+            child: IconButton(
+              icon: const Icon(
+                Icons.arrow_forward,
+                size: 30,
+                color: Colors.black,
+              ),
+              onPressed: () => context.pushNamed(AppRoutes.page5),
+            ),
           ),
         ],
       ),

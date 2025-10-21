@@ -16,10 +16,10 @@ class Page4Screen extends StatelessWidget {
           // Background
           Container(color: AppColors.gradientEnd),
           Container(
-            height: 200,
+            height: 160,
             decoration: const BoxDecoration(
               gradient: LinearGradient(
-                colors: [Color.fromARGB(255, 61, 39, 3), AppColors.gradientEnd],
+                colors: [Color(0xFFEAEFFE), AppColors.gradientEnd],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
               ),
